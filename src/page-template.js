@@ -738,7 +738,7 @@ ${templateData.usage}
 
 ## License 
 
-${generateLic(templateData.githubUsername,TemplateData.license)}
+${generateLic(templateData.githubUsername,templateData.license)}
 
 ## Contributing 
 

@@ -7,7 +7,7 @@ const promptUser = readMeData => {
     {
       type: 'input',
       name: 'project-title',
-      message: 'What is your project title',
+      message: 'What is your project title?',
     
     },
     {
@@ -37,38 +37,31 @@ const promptUser = readMeData => {
     {
       type: 'input',
       name: 'test',
-      message: 'provide testing instructions'
+      message: 'provide testing instructions',
 
     },
     {
       type:'checkbox',
       name: 'license',
       message:'select a liscense option',
-      choices:['MIT','GNU','Apache']
+      choices:['MIT','GNU','Apache'],
 
 
     },
     {
       type:'input',
       name: 'githubUsername',
-      message:'add a github username'
+      message:'add a github username',
     },
     {
       type: 'name',
       name: 'emailAddress',
-      message: 'add an email address'
-    }
+      message: 'add an email address',
+    },
 
 
-  ]);
-};
-
-
-promptUser()
-  //.then(promptProject)
-  .then(readMeData => {
-    return generatePage(readMeData);
-  })
+  ]).then(readMeData=>
+  generatePage(readMeData))
   .then(pageHTML => {
     return writeFile(pageHTML);
   })
@@ -79,3 +72,20 @@ promptUser()
   .catch(err => {
     console.log(err);
   });
+}
+
+
+promptUser()
+/*
+//.then(readMeData=>
+  generatePage(readMeData)
+  .then(pageHTML => {
+    return writeFile(pageHTML);
+  })
+  .then(writeFileResponse => {
+    console.log(writeFileResponse);
+    
+  })
+  .catch(err => {
+    console.log(err);
+  });*/

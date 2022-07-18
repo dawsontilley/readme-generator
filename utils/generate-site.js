@@ -20,4 +20,4 @@ const writeFile = fileContent => {
 // copying file
 
 
-module.exports = { writeFile };
+module.exports = writeFile;
