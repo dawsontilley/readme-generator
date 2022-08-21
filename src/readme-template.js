@@ -63,7 +63,7 @@ module.exports = templateData => {
 
 ${generateBadge(templateData.license)}
 
-# ${templateData.project-title}
+# ${templateData.title}
 
 ## Description
 
