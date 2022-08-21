@@ -6,7 +6,13 @@ const promptUser = readMeData => {
   inquirer.prompt([
     {
       type: 'input',
-      name: 'project-title',
+      name: 'name',
+      message: 'What is your name?',
+    
+    },
+    {
+      type: 'input',
+      name: 'title',
       message: 'What is your project title?',
     
     },
@@ -41,10 +47,11 @@ const promptUser = readMeData => {
 
     },
     {
-      type:'checkbox',
+      type:'rawlist',
       name: 'license',
-      message:'select a liscense option',
+      message:'select a license option',
       choices:['MIT','GNU','Apache'],
+      default:['MIT']
 
 
     },
